@@ -3,11 +3,12 @@ package handlers
 import (
 	"encoding/xml"
 	"fmt"
-	"github.com/samedi/caldav-go/data"
-	"github.com/samedi/caldav-go/global"
-	"github.com/samedi/caldav-go/ixml"
-	"github.com/samedi/caldav-go/lib"
 	"net/http"
+
+	"github.com/chrisnharvey/caldav-go/data"
+	"github.com/chrisnharvey/caldav-go/global"
+	"github.com/chrisnharvey/caldav-go/ixml"
+	"github.com/chrisnharvey/caldav-go/lib"
 )
 
 // Wraps a multistatus response. It contains the set of `Responses`

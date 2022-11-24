@@ -11,8 +11,8 @@ import (
 
 	"github.com/laurent22/ical-go"
 
-	"github.com/samedi/caldav-go/files"
-	"github.com/samedi/caldav-go/lib"
+	"github.com/chrisnharvey/caldav-go/files"
+	"github.com/chrisnharvey/caldav-go/lib"
 )
 
 // ResourceInterface defines the main interface of a CalDAV resource object. This
@@ -136,11 +136,11 @@ func (r *Resource) Recurrences() []ResourceRecurrence {
 // The path to the property should be provided in case of nested properties.
 // Example, suppose the resource has this content:
 //
-// 	BEGIN:VCALENDAR
-// 	BEGIN:VEVENT
-// 	DTSTART:20160914T170000
-// 	END:VEVENT
-// 	END:VCALENDAR
+//	BEGIN:VCALENDAR
+//	BEGIN:VEVENT
+//	DTSTART:20160914T170000
+//	END:VEVENT
+//	END:VCALENDAR
 //
 // HasProperty("VEVENT", "DTSTART") => returns true
 // HasProperty("VEVENT", "DTEND") => returns false
@@ -152,11 +152,11 @@ func (r *Resource) HasProperty(propPath ...string) bool {
 // The path to the property should be provided in case of nested properties.
 // Example, suppose the resource has this content:
 //
-// 	BEGIN:VCALENDAR
-// 	BEGIN:VEVENT
-// 	DTSTART:20160914T170000
-// 	END:VEVENT
-// 	END:VCALENDAR
+//	BEGIN:VCALENDAR
+//	BEGIN:VEVENT
+//	DTSTART:20160914T170000
+//	END:VEVENT
+//	END:VCALENDAR
 //
 // GetPropertyValue("VEVENT", "DTSTART") => returns "20160914T170000"
 // GetPropertyValue("VEVENT", "DTEND") => returns ""
@@ -173,11 +173,11 @@ func (r *Resource) GetPropertyValue(propPath ...string) string {
 // The path to the param should be provided in case of nested params.
 // Example, suppose the resource has this content:
 //
-// 	BEGIN:VCALENDAR
-// 	BEGIN:VEVENT
-// 	ATTENDEE;PARTSTAT=NEEDS-ACTION:FOO
-// 	END:VEVENT
-// 	END:VCALENDAR
+//	BEGIN:VCALENDAR
+//	BEGIN:VEVENT
+//	ATTENDEE;PARTSTAT=NEEDS-ACTION:FOO
+//	END:VEVENT
+//	END:VCALENDAR
 //
 // HasPropertyParam("VEVENT", "ATTENDEE", "PARTSTAT") => returns true
 // HasPropertyParam("VEVENT", "ATTENDEE", "OTHER") => returns false
@@ -189,11 +189,11 @@ func (r *Resource) HasPropertyParam(paramPath ...string) bool {
 // The path to the param should be provided in case of nested params.
 // Example, suppose the resource has this content:
 //
-// 	BEGIN:VCALENDAR
-// 	BEGIN:VEVENT
-// 	ATTENDEE;PARTSTAT=NEEDS-ACTION:FOO
-// 	END:VEVENT
-// 	END:VCALENDAR
+//	BEGIN:VCALENDAR
+//	BEGIN:VEVENT
+//	ATTENDEE;PARTSTAT=NEEDS-ACTION:FOO
+//	END:VEVENT
+//	END:VCALENDAR
 //
 // GetPropertyParamValue("VEVENT", "ATTENDEE", "PARTSTAT") => returns "NEEDS-ACTION"
 // GetPropertyParamValue("VEVENT", "ATTENDEE", "OTHER") => returns ""
