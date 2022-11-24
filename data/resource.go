@@ -9,7 +9,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/laurent22/ical-go"
+	"github.com/chrisnharvey/ical-go"
 
 	"github.com/chrisnharvey/caldav-go/files"
 	"github.com/chrisnharvey/caldav-go/lib"
